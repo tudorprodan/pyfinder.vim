@@ -1,5 +1,7 @@
 # pyfinder.vim
 
+#### Version 0.1
+
 Jump to source file for python import statements.
 
 ## What it does
