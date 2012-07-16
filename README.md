@@ -6,6 +6,8 @@ Jump to source file for python import statements.
 
 ## What it does
 
+[1 minute presentation video here](http://www.youtube.com/watch?v=_W1INYpyMmo).
+
 ```python
 from django.contrib.admin.models import User
 ```
@@ -24,20 +26,15 @@ There are currently no configuration options available, so no need to edit your 
 
 You can now use `<leader>gs` to jump to the source of your import statement.
 
+For now, you need a version of vim with python bindings. This will no longer be required in the future.
+
+Look out for the version numer on top, when it changes, update your plugin.
+
 ### Using pathogen
 
 Just clone the project in your bundles directory.
 
 `git clone git://github.com/tudorprodan/pyfinder.vim.git /path/to/.vim/bundle/`
-
-
-## Implementation
-
-This plugin DOES NOT run any of the python modules it searches for.
-
-Instead it searches by hand in the python paths.
-
-It doesn't use `imp`, `pkgutil`, or anything else, as all of them import either the target module or their parents when fetching paths.
 
 ## Supported paths
 
@@ -47,6 +44,14 @@ Currently, the plugin finds python modules in the following order:
 2. as a relative path to the project root (current directory)
 3. as an absolute path to any of the virtualenv packages (if `$VIRTUAL_ENV` is set, by the activate script)
 4. as an absolute path to any system module
+
+## Implementation
+
+This plugin DOES NOT run any of the python modules it searches for.
+
+Instead it searches by hand in the python paths.
+
+It doesn't use `imp`, `pkgutil`, or anything else, as all of them import either the target module or their parents when fetching paths.
 
 ## Limitations
 
