@@ -9,7 +9,7 @@ from django.contrib.admin.models import User
 ```
 
 Place the cursor on the above line, type
-`<leader>gf`
+`<leader>gs`
 
 vim opens a new buffer with  
 `.venv/lib/python2.7/site-packages/django/contrib/admin/models.py`
@@ -19,6 +19,8 @@ vim opens a new buffer with
 To install the plugin, just drop the plugin folder to your `dotvim` directory.
 
 There are currently no configuration options available, so no need to edit your config file.
+
+You can now use `<leader>gs` to jump to the source of your import statement.
 
 ### Using pathogen
 
