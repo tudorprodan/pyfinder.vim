@@ -14,6 +14,19 @@ Place the cursor on the above line, type
 vim opens a new buffer with  
 `.venv/lib/python2.7/site-packages/django/contrib/admin/models.py`
 
+## Installation
+
+To install the plugin, just drop the plugin folder to your `dotvim` directory.
+
+There are currently no configuration options available, so no need to edit your config file.
+
+### Using pathogen
+
+Just clone the project in your bundles directory.
+
+`git clone git://github.com/tudorprodan/pyfinder.vim.git /path/to/.vim/bundle/`
+
+
 ## Implementation
 
 This plugin DOES NOT run any of the python modules it searches for.
