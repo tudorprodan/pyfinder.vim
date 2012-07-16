@@ -8,7 +8,9 @@ Jump to source file for python import statements.
 from django.contrib.admin.models import User
 ```
 
-Place the cursor on the above line, type `<leader>gf`,  
+Place the cursor on the above line, type
+`<leader>gf`
+
 vim opens a new buffer with  
 `.venv/lib/python2.7/site-packages/django/contrib/admin/models.py`
 
@@ -28,3 +30,30 @@ Currently, the plugin finds python modules in the following order:
 2. as a relative path to the project root (current directory)
 3. as an absolute path to any of the virtualenv packages (if `$VIRTUAL_ENV` is set, by the activate script)
 4. as an absolute path to any system module
+
+## Limitations
+
+The plugin currently uses Vim's `Python` bindings, and doesn't work without them.
+
+However, the only real piece of python code that needs to be ran is at plugin-load to determine all system package paths. So it can be rewritten in full `VimL` in order to be usable on versions compiled with `-python`.
+
+## Plans for the future
+
+I plan to implement the following features, but I just haven't had time to yet.
+
+* customizable bindings, `CtrlP` style. `let g:pyfinder_map`
+* more commands to open in: new tab, split, vertical split
+* `VimL` reimplementation. I have implemented it in `Python` to make sure it's useful and usable. There are no limitations why it could not be rewritten in `VimL`
+* command to refresh with a new project root
+* command to add a virtualenv
+* project config file to be read, to allow more custom python package setups
+
+## Contributing
+
+Please feel free to contribute.
+
+I'm quite new to writing Vim plugins, I'm sure there's a lot of stuff that can be improved.
+
+If you find an issue, please post it in the (issue tracker)[https://github.com/tudorprodan/pyfinder.vim/issues].
+
+Thanks!
