@@ -54,6 +54,6 @@ Please feel free to contribute.
 
 I'm quite new to writing Vim plugins, I'm sure there's a lot of stuff that can be improved.
 
-If you find an issue, please post it in the (issue tracker)[https://github.com/tudorprodan/pyfinder.vim/issues].
+If you find an issue, please post it in the [issue tracker](https://github.com/tudorprodan/pyfinder.vim/issues).
 
 Thanks!
